@@ -61,8 +61,8 @@ rdd(nb::ndarray<nb::numpy, T, nb::ndim<2>> X, double fh, double bw, double dt,
 
 template <typename T>
 nb::ndarray<nb::numpy, T, nb::ndim<2>>
-dmt(nb::ndarray<nb::numpy, T, nb::ndim<2>> X, double fh, double bw, double dt,
-    double lodm, double hidm, size_t ndms) {
+ddmt(nb::ndarray<nb::numpy, T, nb::ndim<2>> X, double fh, double bw, double dt,
+     double lodm, double hidm, size_t ndms) {
   size_t nf = X.shape(0);
   size_t nt = X.shape(1);
   T *Y = (T *)calloc(ndms * nt, sizeof(T));

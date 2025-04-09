@@ -7,8 +7,8 @@ NB_MODULE(base, m) {
   m.def("dd", &fb::dd<double>);
   m.def("rdd", &fb::rdd<float>);
   m.def("rdd", &fb::rdd<double>);
-  m.def("dmt", &fb::dmt<float>);
-  m.def("dmt", &fb::dmt<double>);
+  m.def("ddmt", &fb::ddmt<float>);
+  m.def("ddmt", &fb::ddmt<double>);
   m.def("fold", &fb::fold<float>);
   m.def("fold", &fb::fold<double>);
   m.def("runmed", &fb::runmed<float>);
