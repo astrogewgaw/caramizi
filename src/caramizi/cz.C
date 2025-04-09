@@ -19,9 +19,9 @@ NB_MODULE(base, m) {
   m.def("norm", nb::overload_cast<nb::ndarray<nb::numpy, double, nb::ndim<1>>>(&fb::norm<double>));
   m.def("norm", nb::overload_cast<nb::ndarray<nb::numpy, float, nb::ndim<2>>>(&fb::norm<float>));
   m.def("norm", nb::overload_cast<nb::ndarray<nb::numpy, double, nb::ndim<2>>>(&fb::norm<double>));
-  m.def("inplacenorm", nb::overload_cast<nb::ndarray<nb::numpy, float, nb::ndim<1>>>(&fb::inplacenorm<float>));
-  m.def("inplacenorm", nb::overload_cast<nb::ndarray<nb::numpy, double, nb::ndim<1>>>(&fb::inplacenorm<double>));
-  m.def("inplacenorm", nb::overload_cast<nb::ndarray<nb::numpy, float, nb::ndim<2>>>(&fb::inplacenorm<float>));
-  m.def("inplacenorm", nb::overload_cast<nb::ndarray<nb::numpy, double, nb::ndim<2>>>(&fb::inplacenorm<double>));
+  m.def("inorm", nb::overload_cast<nb::ndarray<nb::numpy, float, nb::ndim<1>>>(&fb::inorm<float>));
+  m.def("inorm", nb::overload_cast<nb::ndarray<nb::numpy, double, nb::ndim<1>>>(&fb::inorm<double>));
+  m.def("inorm", nb::overload_cast<nb::ndarray<nb::numpy, float, nb::ndim<2>>>(&fb::inorm<float>));
+  m.def("inorm", nb::overload_cast<nb::ndarray<nb::numpy, double, nb::ndim<2>>>(&fb::inorm<double>));
 }
 /* clang-format on */

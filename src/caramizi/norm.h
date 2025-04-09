@@ -34,8 +34,7 @@ template <typename T> double stdev(nb::ndarray<nb::numpy, T, nb::ndim<1>> X) {
       }));
 }
 
-template <typename T>
-void inplacenorm(nb::ndarray<nb::numpy, T, nb::ndim<1>> X) {
+template <typename T> void inorm(nb::ndarray<nb::numpy, T, nb::ndim<1>> X) {
   const size_t n = X.size();
   double mu = median<T>(X);
   double sigma = stdev<T>(X);
@@ -53,14 +52,13 @@ norm(nb::ndarray<nb::numpy, T, nb::ndim<1>> X) {
   return nb::ndarray<nb::numpy, T, nb::ndim<1>>(Y, {n}, nb::handle());
 }
 
-template <typename T>
-void inplacenorm(nb::ndarray<nb::numpy, T, nb::ndim<2>> X) {
+template <typename T> void inorm(nb::ndarray<nb::numpy, T, nb::ndim<2>> X) {
   size_t nrows = X.shape(0);
   size_t ncols = X.shape(1);
   for (size_t i = 0; i < nrows; ++i) {
     nb::ndarray xx = nb::ndarray<nb::numpy, T, nb::ndim<1>>(
         X.data() + i * ncols, {ncols}, nb::handle());
-    inplacenorm(xx);
+    inorm(xx);
   }
 }
 
