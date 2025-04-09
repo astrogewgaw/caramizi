@@ -37,8 +37,8 @@ dd(nb::ndarray<nb::numpy, T, nb::ndim<2>> X, double fh, double bw, double dt,
 
 template <typename T>
 nb::ndarray<nb::numpy, T, nb::ndim<2>>
-rolldd(nb::ndarray<nb::numpy, T, nb::ndim<2>> X, double fh, double bw,
-       double dt, double dm) {
+rdd(nb::ndarray<nb::numpy, T, nb::ndim<2>> X, double fh, double bw, double dt,
+    double dm) {
   size_t nf = X.shape(0);
   size_t nt = X.shape(1);
   T *Y = (T *)calloc(nf * nt, sizeof(T));
