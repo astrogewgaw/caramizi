@@ -1,5 +1,5 @@
 import numpy as np
-from caramizi import dd, rolldd
+from caramizi import dd, rdd
 
 
 def test_dd(datadir):
@@ -15,11 +15,11 @@ def test_dd(datadir):
     )
 
 
-def test_rolldd(datadir):
+def test_rdd(datadir):
     assert np.allclose(
-        np.load(datadir / "frb.dedisp.npy"),
+        np.load(datadir / "frbdd.npy"),
         np.asarray(
-            rolldd(
+            rdd(
                 np.load(datadir / "frb.npy"),
                 498.4375,
                 200.0,
