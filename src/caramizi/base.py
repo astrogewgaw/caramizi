@@ -25,7 +25,7 @@ def dd(
 
 
 @overload
-def dmt(
+def ddmt(
     arg0: Annotated[ArrayLike, dict(dtype="float32", shape=(None, None))],
     arg1: float,
     arg2: float,
@@ -38,7 +38,7 @@ def dmt(
 
 
 @overload
-def dmt(
+def ddmt(
     arg0: Annotated[ArrayLike, dict(dtype="float64", shape=(None, None))],
     arg1: float,
     arg2: float,
@@ -81,25 +81,25 @@ def fold(
 
 
 @overload
-def inplacenorm(
+def inorm(
     arg: Annotated[ArrayLike, dict(dtype="float32", shape=(None))], /
 ) -> None: ...
 
 
 @overload
-def inplacenorm(
+def inorm(
     arg: Annotated[ArrayLike, dict(dtype="float64", shape=(None))], /
 ) -> None: ...
 
 
 @overload
-def inplacenorm(
+def inorm(
     arg: Annotated[ArrayLike, dict(dtype="float32", shape=(None, None))], /
 ) -> None: ...
 
 
 @overload
-def inplacenorm(
+def inorm(
     arg: Annotated[ArrayLike, dict(dtype="float64", shape=(None, None))], /
 ) -> None: ...
 
@@ -132,7 +132,7 @@ def norm(
 
 
 @overload
-def rolldd(
+def rdd(
     arg0: Annotated[ArrayLike, dict(dtype="float32", shape=(None, None))],
     arg1: float,
     arg2: float,
@@ -143,7 +143,7 @@ def rolldd(
 
 
 @overload
-def rolldd(
+def rdd(
     arg0: Annotated[ArrayLike, dict(dtype="float64", shape=(None, None))],
     arg1: float,
     arg2: float,

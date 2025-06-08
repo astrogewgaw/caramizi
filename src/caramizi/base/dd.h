@@ -25,8 +25,9 @@ dd(nb::ndarray<nb::numpy, T, nb::ndim<2>> X, double fh, double bw, double dt,
   double df = bw / nf;
 
   for (size_t i = 0; i < nf; ++i) {
-    xi = (int)std::round(
-        kdm * dm * (std::pow(fh - (i * df), -2.0) - std::pow(fh, -2.0)) / dt);
+    xi = (int)std::round((T)kdm * dm *
+                         (std::pow(fh - (i * df), -2.0) - std::pow(fh, -2.0)) /
+                         dt);
     for (size_t j = 0; j < nt; ++j) {
       jj = j + xi;
       if (jj < nt) Y[j] += x(i, jj);
@@ -48,8 +49,9 @@ rdd(nb::ndarray<nb::numpy, T, nb::ndim<2>> X, double fh, double bw, double dt,
   double f, shift;
   double df = bw / nf;
   for (size_t i = 0; i < nf; ++i) {
-    xi = (int)std::round(
-        kdm * dm * (std::pow(fh - (i * df), -2.0) - std::pow(fh, -2.0)) / dt);
+    xi = (int)std::round((T)kdm * dm *
+                         (std::pow(fh - (i * df), -2.0) - std::pow(fh, -2.0)) /
+                         dt);
     for (size_t j = 0; j < nt; ++j) {
       jj = j + xi;
       if (jj >= nt) jj = jj % nt;
@@ -75,7 +77,7 @@ ddmt(nb::ndarray<nb::numpy, T, nb::ndim<2>> X, double fh, double bw, double dt,
   for (size_t i = 0; i < ndms; ++i) {
     for (size_t j = 0; j < nf; ++j) {
       xi = (int)std::round(
-          kdm * (lodm + i * ddm) *
+          (T)kdm * (lodm + i * ddm) *
           (std::pow(fh - (j * df), -2.0) - std::pow(fh, -2.0)) / dt);
       for (size_t k = 0; k < nt; ++k) {
         kk = k + xi;

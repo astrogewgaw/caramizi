@@ -1,23 +1,23 @@
 from caramizi.base import (
     kdm,
     dd,
-    dmt,
+    rdd,
+    ddmt,
     fold,
     norm,
+    inorm,
     runmed,
-    rolldd,
     scrunch,
-    inplacenorm,
 )
 
 __all__ = [
     "kdm",
     "dd",
-    "dmt",
+    "rdd",
+    "ddmt",
     "fold",
     "norm",
-    "rolldd",
+    "inorm",
     "runmed",
     "scrunch",
-    "inplacenorm",
 ]

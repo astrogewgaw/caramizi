@@ -41,14 +41,15 @@ nanobind_add_module(
 
   # The module.
   src/caramizi/cz.C
-  src/caramizi/cz.h
  
-  # All the kernels.
-  src/caramizi/dd.h
-  src/caramizi/fold.h
-  src/caramizi/norm.h
-  src/caramizi/runmed.h
-  src/caramizi/scrunch.h
+  # Basic kernels.
+  src/caramizi/base/dd.h
+  src/caramizi/base/fold.h
+  src/caramizi/base/norm.h
+  src/caramizi/base/runmed.h
+  src/caramizi/base/scrunch.h
+  src/caramizi/base/base.h
+  src/caramizi/base/base.C
 )
 
 # Install directive for scikit-build-core
